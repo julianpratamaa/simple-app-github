@@ -21,7 +21,7 @@ jobs:
         run: docker images
 
       - name: Login to GitHub Registry
-        run: echo ${{ secrets.TOKEN_GITHUB }} | docker login ghcr.io -u USERNAME_GITHUB --password-stdin
+        run: echo ${{ secrets.TOKEN_GITHUB }} | docker login ghcr.io -u julianpratamaa --password-stdin
 
       - name: Push Image
         run: docker push $IMAGE_NAME
