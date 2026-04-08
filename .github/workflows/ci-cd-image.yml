@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Login to GitHub Registry
-        run: echo ${{ secrets.TOKEN_GITHUB }} | docker login ghcr.io -u USERNAME_GITHUB --password-stdin
+        run: echo ${{ secrets.TOKEN_GITHUB }} | docker login ghcr.io -u julianpratamaa --password-stdin
 
       - name: stop and remove existing container
         run: docker compose down --rmi all
